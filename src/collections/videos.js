@@ -16,7 +16,6 @@ var Videos = Backbone.Collection.extend({
         key: window.YOUTUBE_API_KEY,
         videoEmbeddable: true,
         type: 'video',
-        reset: true,
       }
       
     });

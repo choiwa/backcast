@@ -7,7 +7,15 @@ var SearchView = Backbone.View.extend({
   
   events: {
     'click button': 'clickHandler',
-    
+    'keydown': 'clickEnter'
+  },
+  
+  clickEnter: function(e) {
+    if (e.keyCode === 13) {
+      var input = this.$('input').val();
+      this.collection.search(input);
+      this.$('input').val('');
+    }
   },
   
   clickHandler: function(e) {

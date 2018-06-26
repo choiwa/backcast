@@ -3,7 +3,7 @@ var VideoListView = Backbone.View.extend({
   initialize: function() {
     this.collection.forEach(function(elem) {
       new VideoListEntryView({model: elem});
-    })
+    });
     
     this.render();
   },
